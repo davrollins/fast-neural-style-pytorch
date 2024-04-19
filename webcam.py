@@ -2,8 +2,31 @@ import cv2
 import transformer
 import torch
 import utils
+# Prompt for Style Transformer Model and set video window top bar name
+pth=input( " (1) Bayanihan \n (2) Lazy \n (3) Mosaic \n (4) Starry Night \n (5) Tokyo Ghoul \n (6) Udnie \n (7) Wave \n Enter Style: " )
+if pth in ("1", "Bayanihan", "bayanian"):
+   STYLE_TRANSFORM_PATH = ("transforms/bayanihan.pth")
+   DEMO = ("Bayanihan Style Transformation Demo")
+elif pth in ("2", "Lazy", "lazy"):
+   STYLE_TRANSFORM_PATH = ("transforms/lazy.pth")
+   DEMO = ("Lazy Style Transformation Demo")
+elif pth in ("3", "Mosaic", "mosaic"):
+   STYLE_TRANSFORM_PATH = ("transforms/mosaic.pth")
+   DEMO = ("Mosaic Style Transformation Demo")
+elif pth in ("4", "Starry", "starry"):
+   STYLE_TRANSFORM_PATH = ("transforms/starry.pth")
+   DEMO = ("Starry Night Style Transformation Demo")
+elif pth in ("5", "Tokyo_Ghoul", "tokyo_ghoul", "tokyo", "Tokyo"):
+   STYLE_TRANSFORM_PATH = ("transforms/tokyo_ghoul.pth")
+   DEMO = ("Tokyo_Ghoul Style Transformation Demo")
+elif pth in ("6", "Udnie", "udnie"):
+   STYLE_TRANSFORM_PATH = ("transforms/udnie.pth")
+   DEMO = ("Udnie Style Transformation Demo")
+elif pth in ("7", "Wave", "wave"):
+   STYLE_TRANSFORM_PATH = ("transforms/wave.pth")
+   DEMO = ("The Great Wave off Kanagawa Style Transformation Demo")
 
-STYLE_TRANSFORM_PATH = "transforms/mosaic.pth"
+
 PRESERVE_COLOR = False
 WIDTH = 1280
 HEIGHT = 720
